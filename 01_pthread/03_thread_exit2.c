@@ -32,10 +32,10 @@ void* callback(void* args)
 int main()
 {   
     pthread_t pth1; 
-    pthread_create(&pth1,NULL, callback, NULL);
+    pthread_create(&pth1, NULL, callback, NULL);
     printf("this is main thread %ld ! \n", pthread_self());
     // pthread_join() to get the child thread return values;
-    // 1. if the 2nd arg is NULL, which means doesnt receive any retval from child thread.
+    // 1. if the 2nd arg is NULL, which means doesn't receive any retval from child thread.
     // pthread_join(pth1, NULL);
     // 2. ptr is 二级指针， which point to the child thread retval;
     void *ptr;

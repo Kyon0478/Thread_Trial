@@ -33,7 +33,7 @@ int main()
 {   
     pthread_t pth1;
     struct_t st1;
-    pthread_create(&pth1,NULL, callback, &st1);
+    pthread_create(&pth1, NULL, callback, &st1); // input as &st1;
     printf("this is main thread %ld ! \n", pthread_self());
     // pthread_join() to get the child thread return values;
     // 1. if the 2nd arg is NULL, which means doesnt receive any retval from child thread.
