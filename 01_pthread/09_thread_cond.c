@@ -9,7 +9,7 @@
 
 // normally condition is cooperate with mutex ;
 pthread_mutex_t  lock;
-pthread_cond_t cond;  // for consumer limit; 
+pthread_cond_t cond;  // for consumer limtit; 
 pthread_cond_t cond2; // for producer upper limit;
 
 //create link

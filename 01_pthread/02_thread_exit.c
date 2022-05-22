@@ -12,13 +12,12 @@ void* printHello(void* args)
     printf("this is child thread %ld ! \n", pthread_self());
     // pthread_self() => type is pthread_t (unsigned long type)
     //                   which print out the thread ID;
-    return NULL;
 }
 
 int main()
 {   
     pthread_t pth1; 
-    pthread_create(&pth1, NULL, printHello, NULL);
+    pthread_create(&pth1,NULL, printHello, NULL);
     printf("this is main thread %ld ! \n", pthread_self());
     printf("main thread is exiting\n");
     pthread_exit(NULL);

@@ -1,10 +1,10 @@
 TAR = a.out
-OBJ = 04_thread_join.c
-CC =gcc
+OBJ = 02_multithread.c
+CC:=gcc
 
 $(TAR):$(OBJ)
-	$(CC) $(OBJ) -o $(TAR) -lpthread -Wall 
+	$(CC) $(OBJ) -o $(TAR) -lpthread 
 
-.PHONY:
+.PHONY
 clean:
 	rm -rf $(TAR)

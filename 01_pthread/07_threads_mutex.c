@@ -11,7 +11,7 @@
 #include <pthread.h>
 
 
-#define  MAX 10
+#define  MAX 50
 
 int g_num;
 // define a mutex lock; 
@@ -24,7 +24,7 @@ void* addfunA(void* args)
         pthread_mutex_lock(&lock);
         int cur = g_num;
         cur++;
-        sleep(1); // usleep is ms;
+        usleep(10); // usleep is ms;
         g_num = cur;
         printf("Thread A, id = %ld, num = %d\n", pthread_self(), g_num);
         pthread_mutex_unlock(&lock);
